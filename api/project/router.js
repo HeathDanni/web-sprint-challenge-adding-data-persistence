@@ -1,21 +1,16 @@
 // build your `/api/projects` router here
 const express = require('express');
-const projects = require("../model");
+const Projects = require("./model");
 
 const router = express.Router();
 
-router.get('/projects', async (req, res, next) => {
+router.get('/', async (req, res, next) => {
     try {
-        const projects = await projects.find()
-        res.json(animals)
+        const projects = await Projects.find()
+        res.json(projects)
     } catch(err) {
         next(err)
     }
-}) 
-
-
-router.get("/projects/:id", async (req, res, next) => {
-    try {
-        
-    }
 })
+
+module.exports = router
