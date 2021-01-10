@@ -8,12 +8,12 @@ This is an individual assessment. All work must be your own. Your challenge scor
 
 ## Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN version of the repository. (Not Lambda's by mistake!)
-- [ ] Implement the project in a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Create and push commits regularly: `git push origin <firstName-lastName>`.
-- [ ] Do not move or rename any of the existing files or folders.
-- [ ] Do not remove any scripts from the `package.json` but you may add new ones.
+- [X] Create a forked copy of this project.
+- [X] Clone your OWN version of the repository. (Not Lambda's by mistake!)
+- [X] Implement the project in a new branch: `git checkout -b <firstName-lastName>`.
+- [X] Create and push commits regularly: `git push origin <firstName-lastName>`.
+- [X] Do not move or rename any of the existing files or folders.
+- [X] Do not remove any scripts from the `package.json` but you may add new ones.
 
 ## Project Instructions
 
@@ -27,24 +27,24 @@ Use appropriate data types and constraints:
 
 A **project** is what needs to be done and is stored in a `projects` table with the following columns:
 
-- [ ] `project_id` - primary key
-- [ ] `project_name` - required
-- [ ] `project_description` - optional
-- [ ] `project_completed` - required but the database defaults it to not completed if not provided
+- [X] `project_id` - primary key
+- [X] `project_name` - required
+- [X] `project_description` - optional
+- [X] `project_completed` - required but the database defaults it to not completed if not provided
 
 A **resource** is anything needed to complete a project and is stored in a `resources` table with the following columns:
 
-- [ ] `resource_id` - primary key
-- [ ] `resource_name` - required and unique
-- [ ] `resource_description` - optional
+- [X] `resource_id` - primary key
+- [X] `resource_name` - required and unique
+- [X] `resource_description` - optional
 
 A **task** is one of the steps needed to complete a project and is stored in a `tasks` table with the following columns:
 
-- [ ] `task_id` - primary key
-- [ ] `task_description` - required
-- [ ] `task_notes` - optional
-- [ ] `task_completed` - required but the database defaults it to not completed if not provided
-- [ ] `project_id` - required and points to an actual `project_id` in the `projects` table
+- [X] `task_id` - primary key
+- [X] `task_description` - required
+- [X] `task_notes` - optional
+- [X] `task_completed` - required but the database defaults it to not completed if not provided
+- [X] `project_id` - required and points to an actual `project_id` in the `projects` table
 
 A **resource assignment** connects a resource and a project, and is stored in a `project_resources` table. You decide what columns to use.
 
@@ -52,28 +52,28 @@ A **resource assignment** connects a resource and a project, and is stored in a 
 
 Your finished project must meet all of the following requirements:
 
-- [ ] Design the data model and use knex migrations to create the database and tables.
-- [ ] Build an API inside the `api` folder with endpoints for:
+- [X] Design the data model and use knex migrations to create the database and tables.
+- [X] Build an API inside the `api` folder with endpoints for:
 
-  - [ ] `[POST] /api/resources`
+  - [X] `[POST] /api/resources`
     - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
 
-  - [ ] `[GET] /api/resources`
+  - [X] `[GET] /api/resources`
     - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
 
-  - [ ] `[POST] /api/projects`
+  - [X] `[POST] /api/projects`
     - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
     - Example of response body: `{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}`
 
-  - [ ] `[GET] /api/projects`
+  - [X] `[GET] /api/projects`
     - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
     - Example of response body: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
 
-  - [ ] `[POST] /api/tasks`
+  - [X] `[POST] /api/tasks`
     - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
     - Example of response body: `{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_id:1}`
 
-  - [ ] `[GET] /api/tasks`
+  - [X] `[GET] /api/tasks`
     - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
     - Each task must include `project_name` and `project_description`
     - Example of response body: `[{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_name:"bar","project_description":null}]`
@@ -102,6 +102,10 @@ There are two possible ways to submit this project to Canvas. Lambda Staff will 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain the difference between Relational Databases and SQL.
+    SQL is a DBMS we use to build and communicate with the database.  Relational is a type of database that is much like a spreadsheet.
 2. Why do tables need a Primary Key?
+    Tables need primary keys so that you can refer to and access each item on that table.
 3. What is the name given to a table column that references the Primary Key on another table?
+    Foreign key
 4. What do we need in order to have a _many to many_ relationship between two tables?
+    You should create a join table to hold the data that references the relationship between both tables.
