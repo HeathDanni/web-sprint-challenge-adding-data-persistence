@@ -8,12 +8,12 @@ This is an individual assessment. All work must be your own. Your challenge scor
 
 ## Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN version of the repository. (Not Lambda's by mistake!)
-- [ ] Implement the project in a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Create and push commits regularly: `git push origin <firstName-lastName>`.
-- [ ] Do not move or rename any of the existing files or folders.
-- [ ] Do not remove any scripts from the `package.json` but you may add new ones.
+- [X] Create a forked copy of this project.
+- [X] Clone your OWN version of the repository. (Not Lambda's by mistake!)
+- [X] Implement the project in a new branch: `git checkout -b <firstName-lastName>`.
+- [X] Create and push commits regularly: `git push origin <firstName-lastName>`.
+- [X] Do not move or rename any of the existing files or folders.
+- [X] Do not remove any scripts from the `package.json` but you may add new ones.
 
 ## Project Instructions
 
